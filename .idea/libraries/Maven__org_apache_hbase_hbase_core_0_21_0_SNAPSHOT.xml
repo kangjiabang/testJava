@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.hbase:hbase-core:0.21.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-core/0.21.0-SNAPSHOT/hbase-core-0.21.0-20100507.212414-19.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-core/0.21.0-SNAPSHOT/hbase-core-0.21.0-20100507.212414-19-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-core/0.21.0-SNAPSHOT/hbase-core-0.21.0-20100507.212414-19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
