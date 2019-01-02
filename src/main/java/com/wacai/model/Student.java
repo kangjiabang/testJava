@@ -1,5 +1,8 @@
 package com.wacai.model;
 
+import lombok.Data;
+
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -8,17 +11,21 @@ import java.util.Date;
  * @Date: Created in 12:17 7/1/18.
  * @Description:
  */
+@Data
 public class Student {
 
     private String name;
 
     private int  age;
 
-    //private LocalDateTime birthDate;
+    private LocalDateTime birthDate;
 
     private String[] hobbies;
 
 
+    public Student(LocalDateTime birthDate) {
+        this.birthDate = birthDate;
+    }
 
     public Student(String name, int age) {
         this.name = name;
@@ -55,13 +62,4 @@ public class Student {
         this.hobbies = hobbies;
     }
 
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", hobbies=" + Arrays.toString(hobbies) +
-                '}';
-    }
 }
