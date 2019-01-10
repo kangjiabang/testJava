@@ -33,6 +33,7 @@ public class TestGenericArrayTypeBean<T> {
                         + field.getName()
                         + "; getGenericComponentType()"
                         + ": "
+
                         + (((GenericArrayType)field.getGenericType()).getGenericComponentType()));
             }
         }
