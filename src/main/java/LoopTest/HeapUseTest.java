@@ -17,7 +17,7 @@ public class HeapUseTest {
             if (i == 100) {
                 i = 0l;
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(800);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
