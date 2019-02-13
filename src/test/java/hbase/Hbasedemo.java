@@ -1,3 +1,4 @@
+/*
 package hbase;
 
 import javafx.scene.control.Cell;
@@ -11,11 +12,13 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 import java.util.List;
 
+*/
 /**
  * @Author：zeqi
  * @Date: Created in 15:21 6/10/18.
  * @Description:
- */
+ *//*
+
 public class Hbasedemo {
 
     static Configuration conf = null;
@@ -43,7 +46,8 @@ public class Hbasedemo {
             e.printStackTrace();
         }
 
-        /*Result result = a.getResult("table03", "usr001");
+        */
+/*Result result = a.getResult("table03", "usr001");
         System.out.println(result.toString());
         List<Cell> cells = result.listCells();
         for (int i = 0; i < cells.size(); i++) {
@@ -51,7 +55,8 @@ public class Hbasedemo {
         }
         System.out.println(cell.toString());
         //          printCell(cell); 
-        // }*/
+        // }*//*
+
     }
 
     public void createTable(String tableName, HTableDescriptor htds) throws Exception
@@ -66,3 +71,4 @@ public class Hbasedemo {
 
 
 }
+*/
