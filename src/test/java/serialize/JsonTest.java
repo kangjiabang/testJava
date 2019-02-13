@@ -2,10 +2,6 @@ package serialize;
 
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
-import protobuf.Foo;
-import protobuf.ProtoBufUtils;
-
-import java.util.Arrays;
 
 /**
  * @Author：zeqi

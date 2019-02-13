@@ -19,9 +19,9 @@ public class StudentTest  {
     public void testValidate() {
         Student student = getBean();
         List<String> validate = validate(student);
-        /*validate.forEach(row -> {
+        validate.forEach(row -> {
             System.out.println(row.toString());
-        });*/
+        });
 
     }
 
