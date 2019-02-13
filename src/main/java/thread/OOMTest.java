@@ -1,6 +1,6 @@
 package thread;
 
-import com.wacai.model.Student;
+import aop.spring.model.Student;
 
 import java.util.HashMap;
 

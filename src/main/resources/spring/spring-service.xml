@@ -7,12 +7,12 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-    <bean id="daoImpl" class="com.wacai.aop.DaoImpl" />
-    <bean id="timeHandler" class="com.wacai.aop.TimeHandler" />
+    <bean id="daoImpl" class="aop.spring.spring.DaoImpl" />
+    <bean id="timeHandler" class="aop.spring.spring.TimeHandler" />
 
     <aop:config proxy-target-class="true">
         <aop:aspect id="time" ref="timeHandler">
-            <aop:pointcut id="addAllMethod" expression="execution(* com.wacai..aop.Dao.*(..))" />
+            <aop:pointcut id="addAllMethod" expression="execution(* com.aop..aop.Dao.*(..))" />
             <aop:before method="printTime" pointcut-ref="addAllMethod" />
             <aop:after method="printTime" pointcut-ref="addAllMethod" />
         </aop:aspect>

@@ -1,9 +1,8 @@
 package reflectiontest;
 
-import com.wacai.model.Student;
+import aop.spring.model.Student;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
