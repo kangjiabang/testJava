@@ -1,3 +1,4 @@
+/*
 package cglib;
 
 import net.sf.cglib.core.DebuggingClassWriter;
@@ -7,11 +8,13 @@ import org.junit.Test;
 
 import java.lang.reflect.Method;
 
+*/
 /**
  * @Author：zeqi
  * @Date: Created in 10:29 15/1/18.
  * @Description:
- */
+ *//*
+
 public class CglibTest {
 
     @Test
@@ -93,3 +96,4 @@ public class CglibTest {
 
     }
 }
+*/

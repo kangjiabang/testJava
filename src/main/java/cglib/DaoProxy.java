@@ -1,3 +1,4 @@
+/*
 package cglib;
 
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -16,4 +17,4 @@ public class DaoProxy implements MethodInterceptor {
         return object;
     }
 
-}
+}*/

@@ -1,6 +1,6 @@
 package objenesis;
 
-import aop.spring.model.Student;
+import aop.model.Student;
 import org.springframework.objenesis.Objenesis;
 import org.springframework.objenesis.ObjenesisStd;
 

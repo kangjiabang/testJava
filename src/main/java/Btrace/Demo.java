@@ -8,9 +8,11 @@ package Btrace;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.security.ProtectionDomain;
 
 public class Demo {
     public static void main(String[] args) throws IOException {
+
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("please input the first param:");
         String p1 = bufferedReader.readLine();
@@ -18,6 +20,10 @@ public class Demo {
         String p2 = bufferedReader.readLine();
         new Demo().getResult(Integer.parseInt(p1), Integer.parseInt(p2));
         System.out.println("press ENTER TO EXIT ...");
+
+        ProtectionDomain proectionDomain = Demo.class.getProtectionDomain();
+        System.out.println(proectionDomain.getCodeSource().getLocation().getFile());
+
         bufferedReader.readLine();
     }
 

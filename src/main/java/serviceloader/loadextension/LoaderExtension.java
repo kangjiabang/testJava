@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static com.mchange.v2.resourcepool.ResourcePoolFactory.createInstance;
 
 public class LoaderExtension {
 

@@ -1,6 +1,6 @@
 package thread;
 
-import aop.spring.model.Student;
+import aop.model.Student;
 
 import java.util.HashMap;
 

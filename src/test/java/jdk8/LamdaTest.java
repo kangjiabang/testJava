@@ -1,6 +1,6 @@
 package jdk8;
 
-import aop.spring.model.Student;
+import aop.model.Student;
 import org.junit.Test;
 
 /*import java.time.LocalDateTime;
