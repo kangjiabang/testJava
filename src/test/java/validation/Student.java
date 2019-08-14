@@ -21,6 +21,8 @@ public class Student {
     @Min(value=1,message = "年龄字段必须有值")
     private int  age;
 
+    private SEX sex;
+
 
     private String[] hobbies;
 
@@ -33,6 +35,15 @@ public class Student {
         this.name = name;
         this.age = age;
         this.hobbies = hobbies;
+    }
+
+
+    public SEX getSex() {
+        return sex;
+    }
+
+    public void setSex(SEX sex) {
+        this.sex = sex;
     }
 
     public String getName() {
@@ -60,4 +71,19 @@ public class Student {
     }
 
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", age=" + age +
+                ", sex=" + sex +
+                ", hobbies=" + Arrays.toString(hobbies) +
+                '}';
+    }
+
+    public enum SEX {
+        BOY,
+        GIRL
+    }
 }

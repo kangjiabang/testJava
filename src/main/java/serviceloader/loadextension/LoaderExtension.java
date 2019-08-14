@@ -3,8 +3,8 @@ package serviceloader.loadextension;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.dubbo.common.utils.CollectionUtils;
 import org.springframework.util.ClassUtils;
-import utils.CollectionUtils;
 
 import java.io.IOException;
 import java.io.InputStream;

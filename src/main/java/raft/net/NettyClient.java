@@ -14,13 +14,13 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.util.CollectionUtils;
 import raft.enums.CommandType;
 import raft.leaderstrategy.LeaderChooseAlgorithm;
 import raft.model.RequestVote;
 import raft.net.model.Packet;
 import raft.processor.PacketProcessor;
 import redis.Command;
-import utils.CollectionUtils;
 
 import java.net.ConnectException;
 import java.util.Set;

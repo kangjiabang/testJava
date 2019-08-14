@@ -1,7 +1,21 @@
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Maps;
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.junit.Test;
+import validation.Student;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ConcurrentMap;
@@ -67,6 +81,43 @@ public class BasicTest {
         queueIdMap.put("String",null);
     }
 
+
+    @Test
+    public void testHttpClient() {
+
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+        HttpPost httpPost = new HttpPost("https://apollo.souche-inc.com/apps");
+        httpPost.setHeader("Cookie","_security_token_inc=91563766436748337;Path=/;Domain=.souche-inc.com;Max-Age=86400");
+        try {
+
+        String json = "{\n" +
+                "  \"name\":\"test-benben113321\",\n" +
+                "  \"appId\":\"test-benben13333213\",\n" +
+                "  \"orgId\":\"default\",\n" +
+                "  \"orgName\":\"default\",\n" +
+                "  \"ownerName\":\"15068759176(陈善奔)\",\n" +
+                "  \"admins\":[\"15068759176(陈善奔)\"]\n" +
+                "}";
+        StringEntity postingString = new StringEntity(json,"utf-8");// json传递
+        httpPost.setEntity(postingString);
+        httpPost.setHeader("Content-type", "application/json");
+
+
+            CloseableHttpResponse response1 = httpclient.execute(httpPost);
+            System.out.println(response1.getStatusLine());
+            HttpEntity entity1 = response1.getEntity();
+            // do something useful with the response body
+            // and ensure it is fully consumed
+            EntityUtils.consume(entity1);
+
+
+        }catch ( Exception e) {
+
+        } finally{
+            //response1.close();
+        }
+
+    }
     @Test
     public void testExceptionCatch() {
         try {
@@ -78,6 +129,20 @@ public class BasicTest {
             t.getCause();
         }
     }
+
+    @Test
+    public void testFastJson() {
+        try {
+            Student stuent = JSONObject.parseObject("{\"sex\":\"BOY\"}",Student.class);
+
+            Student.SEX sex = JSON.parseObject("\"BOY\"",Student.SEX.class);
+            System.out.println("student: " + stuent);
+            System.out.println("sex: " + sex);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void testThrowException() {
 

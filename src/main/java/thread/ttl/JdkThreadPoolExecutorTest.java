@@ -14,16 +14,16 @@ public class JdkThreadPoolExecutorTest {
 
     public static void main(String[] args) {
         inheritableThreadLocal.set("perf");
-        threadLocal.set("threadLocal");
+        threadLocal.set("inheritableThreadLocal");
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1,2,1000, TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(10));
 
         for (int i=0;i< 10;i++) {
             threadPoolExecutor.submit(new Runnable() {
-                //static ThreadLocal<String>  threadLocal = new ThreadLocal();
+                //static ThreadLocal<String>  inheritableThreadLocal = new ThreadLocal();
                 @Override
                 public void run() {
-                    System.out.println("ttlThreadLocal:" + inheritableThreadLocal.get());
-                    System.out.println("threadLocal:" + threadLocal.get());
+                    System.out.println("inheritableThreadLocal:" + inheritableThreadLocal.get());
+                    System.out.println("inheritableThreadLocal:" + threadLocal.get());
                     System.out.println("This is thread:" + Thread.currentThread().getName());
                 }
             });
@@ -35,8 +35,8 @@ public class JdkThreadPoolExecutorTest {
 
                 @Override
                 public void run() {
-                    System.out.println("new ttlThreadLocal:" + inheritableThreadLocal.get());
-                    System.out.println("new threadLocal:" + threadLocal.get());
+                    System.out.println("new inheritableThreadLocal:" + inheritableThreadLocal.get());
+                    System.out.println("new inheritableThreadLocal:" + threadLocal.get());
                     System.out.println("new This is thread:" + Thread.currentThread().getName());
                 }
             });

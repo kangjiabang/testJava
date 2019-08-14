@@ -24,7 +24,7 @@ public class WindowWordCount2 {
 
             @Override
             public void processElement(Tuple2<Integer, Integer> value, Context ctx, Collector<Object> out) throws Exception {
-                System.out.println("total word count:" + value.f1);
+                System.out.println("totalSuccess word count:" + value.f1);
             }
         });
 

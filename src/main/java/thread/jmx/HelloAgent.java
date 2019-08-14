@@ -23,11 +23,15 @@ public class HelloAgent
         server.registerMBean(new Hello(), helloName);
         try
         {
-            //这个步骤很重要，注册一个端口，绑定url后用于客户端通过rmi方式连接JMXConnectorServer
+           /* //这个步骤很重要，注册一个端口，绑定url后用于客户端通过rmi方式连接JMXConnectorServer
             LocateRegistry.createRegistry(9999);
             //URL路径的结尾可以随意指定，但如果需要用Jconsole来进行连接，则必须使用jmxrmi
             JMXServiceURL url = new JMXServiceURL
-                    ("service:jmx:rmi:///jndi/rmi://localhost:9999/jmxrmi");
+                    ("service:jmx:rmi:///jndi/rmi://localhost:9999/jmxrmi");*/
+
+            LocateRegistry.createRegistry(9999);
+            JMXServiceURL url = new JMXServiceURL
+                    ("service:jmx:rmi://localhost:9999/jndi/rmi://localhost:9999/jmxrmi");
             JMXConnectorServer jcs = JMXConnectorServerFactory.newJMXConnectorServer(url, null, server);
             System.out.println("begin rmi start");
             jcs.start();

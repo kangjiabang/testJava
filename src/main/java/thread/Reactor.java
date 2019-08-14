@@ -118,7 +118,7 @@ public class Reactor implements Runnable {
             while(input.hasRemaining()){
                 reader.append((char)input.get());
             }
-            System.out.println("[Client-INFO]");
+            System.out.println("[JMXClient-INFO]");
             System.out.println(reader.toString());
             String str = "HTTP/1.1 200 OK\r\nDate: Fir, 10 March 2017 21:20:01 GMT\r\n"+
                     "Content-Type: text/html;charset=UTF-8\r\nContent-Length: 23\r\nConnection:close"+

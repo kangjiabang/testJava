@@ -52,7 +52,7 @@ public class NetServerHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
-        ctx.writeAndFlush("HELLO: Client is connected.\n");
+        ctx.writeAndFlush("HELLO: JMXClient is connected.\n");
 
     }
 

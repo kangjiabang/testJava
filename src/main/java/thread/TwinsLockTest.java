@@ -12,14 +12,14 @@ public class TwinsLockTest {
         for (int i=0;i< 10;i++) {
             /*Thread t = new Thread(() -> {
                 twinsLock.lock();
-                System.out.println(Thread.currentThread().getName() + " lock success.");
+                System.out.println(Thread.currentThread().getName() + " lock addSuccess.");
                 try {
                     Thread.sleep(4*1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
                     twinsLock.unlock();
-                    System.out.println(Thread.currentThread().getName() + " unlock success.");
+                    System.out.println(Thread.currentThread().getName() + " unlock addSuccess.");
                 }
             });
             t.start();*/
