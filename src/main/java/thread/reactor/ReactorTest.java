@@ -43,7 +43,7 @@ public class ReactorTest {
         Flux<Integer> ints = Flux.range(1,12);
         ints.subscribe(i -> System.out.println(i), error -> {
             System.err.println("Error:" + error);
-        }, () -> System.out.println("Done"), sub -> sub.request(10));
+        }, () -> System.out.println("Done"), sub -> sub.request(8));
     }
 
     @Test

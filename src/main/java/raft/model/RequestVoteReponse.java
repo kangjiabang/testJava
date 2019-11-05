@@ -16,4 +16,19 @@ public class RequestVoteReponse implements Serializable {
      */
     private Boolean voteGranted;
 
+    public int getTerm() {
+        return term;
+    }
+
+    public void setTerm(int term) {
+        this.term = term;
+    }
+
+    public Boolean getVoteGranted() {
+        return voteGranted;
+    }
+
+    public void setVoteGranted(Boolean voteGranted) {
+        this.voteGranted = voteGranted;
+    }
 }

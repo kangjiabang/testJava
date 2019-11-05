@@ -2,7 +2,7 @@ package cglib;
 
 public class Dao {
 
-    public void update() {
+    public void update(String name) {
         System.out.println("PeopleDao.update()");
     }
 
