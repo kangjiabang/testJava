@@ -1,3 +1,4 @@
+/*
 package junit5;
 
 
@@ -6,7 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
 
@@ -39,3 +39,4 @@ public class TestJunit5 {
     }
 
 }
+*/

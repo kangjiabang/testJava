@@ -18,9 +18,9 @@ public class DirectByteBufferTest {
         try {
             System.out.println("Hello World!");
             ByteBuffer bb = ByteBuffer.allocateDirect(1024 * 1024 * 1280);
-            Thread.sleep(10000);
+            Thread.sleep(1000);
             ((DirectBuffer)bb).cleaner().clean();
-            Thread.sleep(10000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

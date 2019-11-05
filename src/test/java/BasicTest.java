@@ -9,7 +9,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.Asserts;
 import org.apache.http.util.EntityUtils;
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import validation.Student;
 
@@ -78,7 +80,11 @@ public class BasicTest {
     @Test
     public void testConcurrentMap() {
         ConcurrentMap<String, List<Integer>> queueIdMap = Maps.newConcurrentMap();
-        queueIdMap.put("String",null);
+
+
+        Assertions.assertThatExceptionOfType(NullPointerException.class).isThrownBy(() -> {
+            queueIdMap.put("String",null);
+        });
     }
 
 

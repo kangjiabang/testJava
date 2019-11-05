@@ -1,6 +1,8 @@
 package validation;
 
 
+import org.apache.dubbo.common.extension.DisableInject;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.validation.*;
@@ -16,25 +18,15 @@ import java.util.Set;
 public class StudentTest  {
 
     @Test
+    @Ignore
     public void testValidate() {
-        Student student = getBean();
+        /*Student student = getBean();
         List<String> validate = validate(student);
         validate.forEach(row -> {
             System.out.println(row.toString());
         });
-
+*/
     }
-
-    /*@Test
-    public void testMethodValidate() {
-        Student student = getBean();
-       this.testStduent(student);
-
-    }
-
-    public void testStduent(@Valid Student student) {
-        System.out.println(student);
-    }*/
 
     private static Student getBean() {
         Student bean = new Student();

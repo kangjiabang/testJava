@@ -1,3 +1,4 @@
+/*
 package virtualmachine;
 
 import com.sun.tools.attach.*;
@@ -84,3 +85,4 @@ public class VirtualMachineTest {
 
 
 }
+*/
