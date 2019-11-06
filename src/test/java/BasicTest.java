@@ -91,38 +91,6 @@ public class BasicTest {
     @Test
     public void testHttpClient() {
 
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("https://apollo.souche-inc.com/apps");
-        httpPost.setHeader("Cookie","_security_token_inc=91563766436748337;Path=/;Domain=.souche-inc.com;Max-Age=86400");
-        try {
-
-        String json = "{\n" +
-                "  \"name\":\"test-benben113321\",\n" +
-                "  \"appId\":\"test-benben13333213\",\n" +
-                "  \"orgId\":\"default\",\n" +
-                "  \"orgName\":\"default\",\n" +
-                "  \"ownerName\":\"15068759176(陈善奔)\",\n" +
-                "  \"admins\":[\"15068759176(陈善奔)\"]\n" +
-                "}";
-        StringEntity postingString = new StringEntity(json,"utf-8");// json传递
-        httpPost.setEntity(postingString);
-        httpPost.setHeader("Content-type", "application/json");
-
-
-            CloseableHttpResponse response1 = httpclient.execute(httpPost);
-            System.out.println(response1.getStatusLine());
-            HttpEntity entity1 = response1.getEntity();
-            // do something useful with the response body
-            // and ensure it is fully consumed
-            EntityUtils.consume(entity1);
-
-
-        }catch ( Exception e) {
-
-        } finally{
-            //response1.close();
-        }
-
     }
     @Test
     public void testExceptionCatch() {
