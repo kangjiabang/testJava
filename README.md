@@ -51,3 +51,4 @@ implements Protocol {
 
 # canal学习  
 *启动流程图*  
+https://github.com/kangjiabang/testJava/blob/master/images/canal%E5%9B%BE%E7%89%87.png
