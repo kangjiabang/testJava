@@ -7,9 +7,12 @@ package thread;
  */
 public class NewThreadTest {
 
+    private static int count = 0;
+
     public static void main(String[] args) {
 
-        for (int i=0;i< 1000;i++) {
+
+        for (int i=0;i< 3;i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -17,7 +20,11 @@ public class NewThreadTest {
             }
 
             new Thread(() -> {
-                System.out.println("start");
+                count++;
+
+                System.out.println(Thread.currentThread().getName() +  " " + count);
+
+
             }).start();
         }
     }

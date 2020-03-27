@@ -2,32 +2,39 @@ package buffer;
 
 
 import org.junit.Test;
+import org.springframework.util.Assert;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.Scanner;
 
-public class ByteBufferTest {
+public class MappedByteBufferWriteTest {
 
-    public static void main(String[] args) {
-
-        File file = new File("/Users/dasouche/Documents/code/testJava/pom.xml");
-        long len = file.length();
-        byte[] ds = new byte[(int) len];
+    @Test
+    public void testMappedByteBufferWrite() {
 
         try {
+
+            URL url = MappedByteBufferWriteTest.class.getClassLoader().getResource("test.yaml");
+            Assert.notNull(url,"can not find test.yaml in class path");
+
+            File file = new File(url.getFile());
+            long len = file.length();
+            byte[] ds = new byte[(int) len];
+
             MappedByteBuffer mappedByteBuffer = new RandomAccessFile(file, "rw")
                     .getChannel()
-                    .map(FileChannel.MapMode.READ_ONLY, 0, len);
-            for (int offset = 0; offset < len; offset++) {
-                byte b = mappedByteBuffer.get();
-                ds[offset] = b;
-            }
+                    .map(FileChannel.MapMode.READ_WRITE, 0, len + 1000);
+
+            mappedByteBuffer.position((int)len);
+            mappedByteBuffer.put("Hello world".getBytes());
+            mappedByteBuffer.force();
 
             Scanner scan = new Scanner(new ByteArrayInputStream(ds)).useDelimiter(" ");
             while (scan.hasNext()) {

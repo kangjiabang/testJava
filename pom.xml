@@ -22,6 +22,7 @@
         <hive.version>0.13.1</hive.version>
         <hbase.version>0.98.6-hadoop2</hbase.version>
         <spring.version>4.1.1.RELEASE</spring.version>
+        <powermock.version>2.0.2</powermock.version>
     </properties>
 
     <dependencyManagement>
@@ -36,6 +37,55 @@
     </dependencyManagement>
 
     <dependencies>
+
+        <!-- dependency for promethus-->
+        <!-- The client -->
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+        <!-- Hotspot JVM metrics-->
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_hotspot</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+        <!-- Exposition HTTPServer-->
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_httpserver</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+        <!-- Pushgateway exposition-->
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_pushgateway</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62 </version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.souche</groupId>
+            <artifactId>dubbo-bom</artifactId>
+            <version>2.8.5</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>logback-classic</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>logback-core</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
         <dependency>
@@ -52,6 +102,13 @@
             <version>3.3.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.10.0</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
         <dependency>
@@ -61,7 +118,7 @@
         </dependency>
 
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-core</artifactId>
             <version>1.19</version>
@@ -70,7 +127,7 @@
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-generator-annprocess</artifactId>
             <version>1.19</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>com.netflix.hystrix</groupId>
@@ -104,11 +161,7 @@
             <version>0.11.18</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.11</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -241,6 +294,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>logback-classic</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
 
@@ -577,6 +636,19 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>${powermock.version}</version>
+            <!--<scope>test</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito2</artifactId>
+            <version>${powermock.version}</version>
+            <!--<scope>test</scope>-->
         </dependency>
 
     </dependencies>

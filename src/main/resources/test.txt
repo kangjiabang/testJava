@@ -1,0 +1,26 @@
+package com.alibaba.otter.canal.common.utils;
+
+import java.io.File;
+
+/**
+ * 通用工具类
+ *
+ * @author rewerma 2019-01-25 下午05:20:16
+ * @version 1.0.0
+ */
+public class CommonUtils {
+
+    /**
+     * 获取conf文件夹所在路径
+     *
+     * @return 路径地址
+     */
+    public static String getConfPath() {
+        String classpath = CommonUtils.class.getResource("/").getPath();
+        String confPath = classpath + "../conf/";
+        if (new File(confPath).exists()) {
+            return confPath;
+        } else {
+            return classpath;
+        }
+    }

@@ -1,3 +1,4 @@
+/*
 package benchmark;
 
 import org.openjdk.jmh.annotations.*;
@@ -82,4 +83,4 @@ public class BenchmarkLoop {
         return data;
     }
 
-}
+}*/

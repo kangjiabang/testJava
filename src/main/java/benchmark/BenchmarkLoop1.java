@@ -1,3 +1,4 @@
+/*
 package benchmark;
 
 import okhttp3.Call;
@@ -47,14 +48,16 @@ public class BenchmarkLoop1 {
         DATA_FOR_TESTING = createData();
     }
 
-   /* @Benchmark
+   */
+/* @Benchmark
     @Threads(value = 10)
     public void loopFor(Blackhole bh) {
         for (int i = 0; i < DATA_FOR_TESTING.size(); i++) {
             String s = DATA_FOR_TESTING.get(i); //take out n consume, fair with foreach
             bh.consume(s);
         }
-    }*/
+    }*//*
+
 
     @Benchmark
     @Threads(value = 10)
@@ -95,4 +98,4 @@ public class BenchmarkLoop1 {
         return data;
     }
 
-}
+}*/

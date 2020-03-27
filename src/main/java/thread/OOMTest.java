@@ -17,6 +17,14 @@ public class OOMTest {
     public static void main(String[] args) {
         for (int i=0 ;i < Integer.MAX_VALUE;i++) {
             map.put(i,new Student("zhangsan" + i,i));
+            try {
+                if (i%100 == 0) {
+
+                    Thread.sleep(1);
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
