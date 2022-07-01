@@ -18,7 +18,7 @@
     <properties>
         <flink.version>1.6.1</flink.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hadoop.version>2.5.0</hadoop.version>
+        <hadoop.version>2.7.0</hadoop.version>
         <hive.version>0.13.1</hive.version>
         <hbase.version>0.98.6-hadoop2</hbase.version>
         <spring.version>4.1.1.RELEASE</spring.version>
