@@ -16,11 +16,11 @@ public class CommonUtils {
      * @return 路径地址
      */
     public static String getConfPath() {
-        String classpath = CommonUtils.class.getResource("/").getPath();
-        String confPath = classpath + "../conf/";
+        String basic.classpath = CommonUtils.class.getResource("/").getPath();
+        String confPath = basic.classpath + "../conf/";
         if (new File(confPath).exists()) {
             return confPath;
         } else {
-            return classpath;
+            return basic.classpath;
         }
     }

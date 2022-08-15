@@ -1,2 +1,2 @@
-english=serviceloader.HelloEnglishImpl
-china=serviceloader.HelloChinaImpl
+english=basic.serviceloader.HelloEnglishImpl
+china=basic.serviceloader.HelloChinaImpl

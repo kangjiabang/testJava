@@ -12,7 +12,7 @@ public class JSONPathTest {
 
     /*String json = "{\"code\":200,\"msg\":\"ok\",\"list\":[{\"id\":20,\"no\":\"1000020\",\"items\":[{\"name\":\"n1\",\"price\":21,\"infos\":{\"feature\":\"\"}}]}],\"metainfo\":{\"totalSuccess\":20,\"info\":{\"owner\":\"qinshu\",\"parts\":[{\"count\":13,\"time\":{\"start\":1230002456,\"end\":234001234}}]}}}";
 
-    String storeJson = "{\"store\":{\"book\":[{\"category\":\"reference\",\"author\":\"NigelRees\",\"title\":\"SayingsoftheCentury\",\"price\":8.95},{\"category\":\"fiction\",\"author\":\"EvelynWaugh\",\"title\":\"SwordofHonour\",\"price\":12.99},{\"category\":\"fiction\",\"author\":\"HermanMelville\",\"title\":\"MobyDick\",\"isbn\":\"0-553-21311-3\",\"price\":8.99},{\"category\":\"fiction\",\"author\":\"J.R.R.Tolkien\",\"title\":\"TheLordoftheRings\",\"isbn\":\"0-395-19395-8\",\"price\":22.99}],\"bicycle\":{\"color\":\"red\",\"price\":19.95}}}";
+    String storeJson = "{\"store\":{\"book\":[{\"category\":\"basic.reference\",\"author\":\"NigelRees\",\"title\":\"SayingsoftheCentury\",\"price\":8.95},{\"category\":\"fiction\",\"author\":\"EvelynWaugh\",\"title\":\"SwordofHonour\",\"price\":12.99},{\"category\":\"fiction\",\"author\":\"HermanMelville\",\"title\":\"MobyDick\",\"isbn\":\"0-553-21311-3\",\"price\":8.99},{\"category\":\"fiction\",\"author\":\"J.R.R.Tolkien\",\"title\":\"TheLordoftheRings\",\"isbn\":\"0-395-19395-8\",\"price\":22.99}],\"bicycle\":{\"color\":\"red\",\"price\":19.95}}}";
     @Test
     public void testGetJson() {
         System.out.println(JsonPath.read(json,"$.code"));
@@ -29,8 +29,8 @@ public class JSONPathTest {
 
         //输出全部author的值，使用Iterator迭代
         print(JsonPath.read(storeJson, "$.store.book[*].author"));
-        //输出book[*]中category == 'reference'的book
-        print(JsonPath.read(storeJson, "$.store.book[?(@.category == 'reference')]"));
+        //输出book[*]中category == 'basic.reference'的book
+        print(JsonPath.read(storeJson, "$.store.book[?(@.category == 'basic.reference')]"));
 
         //输出book[*]中price>10的book
         print(JsonPath.read(storeJson, "$.store.book[?(@.price>10)]"));

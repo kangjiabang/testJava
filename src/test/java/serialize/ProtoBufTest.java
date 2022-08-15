@@ -1,8 +1,8 @@
 package serialize;
 
 import org.junit.Test;
-import protobuf.Foo;
-import protobuf.ProtoBufUtils;
+import serialization.protobuf.Foo;
+import serialization.protobuf.ProtoBufUtils;
 
 import java.util.Arrays;
 

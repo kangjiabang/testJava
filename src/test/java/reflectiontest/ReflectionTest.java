@@ -1,6 +1,6 @@
 package reflectiontest;
 
-import aop.model.Student;
+import basic.aop.model.Student;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;

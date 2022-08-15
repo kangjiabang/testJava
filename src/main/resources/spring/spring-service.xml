@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:basic.aop="http://www.springframework.org/schema/basic.aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-        http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+        http://www.springframework.org/schema/basic.aop
+        http://www.springframework.org/schema/basic.aop/spring-basic.aop-3.0.xsd">
 
-    <bean id="daoImpl" class="aop.spring.spring.DaoImpl" />
-    <bean id="timeHandler" class="aop.spring.spring.TimeHandler" />
+    <bean id="daoImpl" class="basic.aop.spring.spring.DaoImpl" />
+    <bean id="timeHandler" class="basic.aop.spring.spring.TimeHandler" />
 
-    <aop:config proxy-target-class="true">
-        <aop:aspect id="time" ref="timeHandler">
-            <aop:pointcut id="addAllMethod" expression="execution(* com.aop..aop.Dao.*(..))" />
-            <aop:before method="printTime" pointcut-ref="addAllMethod" />
-            <aop:after method="printTime" pointcut-ref="addAllMethod" />
-        </aop:aspect>
-    </aop:config>
+    <basic.aop:config proxy-target-class="true">
+        <basic.aop:aspect id="time" ref="timeHandler">
+            <basic.aop:pointcut id="addAllMethod" expression="execution(* com.basic.aop..basic.aop.Dao.*(..))" />
+            <basic.aop:before method="printTime" pointcut-ref="addAllMethod" />
+            <basic.aop:after method="printTime" pointcut-ref="addAllMethod" />
+        </basic.aop:aspect>
+    </basic.aop:config>
 
 </beans>

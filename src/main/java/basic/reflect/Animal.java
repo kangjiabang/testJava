@@ -1,6 +1,6 @@
 package basic.reflect;
 
-import aop.model.Student;
+import basic.aop.model.Student;
 
 public class Animal {
 

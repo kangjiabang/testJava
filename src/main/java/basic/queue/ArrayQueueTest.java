@@ -11,6 +11,7 @@ public class ArrayQueueTest {
         ArrayDeque arrayDeque = new ArrayDeque(8);
         arrayDeque.addFirst(1);
         arrayDeque.addFirst(2);
+        arrayDeque.addLast(10);
         arrayDeque.addFirst(3);
         arrayDeque.addFirst(4);
         arrayDeque.addFirst(5);
