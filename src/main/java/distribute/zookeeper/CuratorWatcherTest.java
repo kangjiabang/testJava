@@ -1,3 +1,4 @@
+/*
 package distribute.zookeeper;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
@@ -6,12 +7,16 @@ import org.apache.curator.framework.recipes.cache.PathChildrenCache;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache.StartMode;
 import org.apache.curator.retry.RetryNTimes;
 
+*/
 /**
  * Curator framework watch test.
- */
+ *//*
+
 public class CuratorWatcherTest {
 
-    /** Zookeeper info */
+    */
+/** Zookeeper info *//*
+
     private static final String ZK_ADDRESS = "localhost:2181";
     private static final String ZK_PATH = "/zktest";
 
@@ -48,4 +53,4 @@ public class CuratorWatcherTest {
         Thread.sleep(Integer.MAX_VALUE);
     }
 
-}
+}*/

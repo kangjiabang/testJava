@@ -1,9 +1,7 @@
 package distribute.zookeeper;
+
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
-import org.apache.curator.framework.recipes.cache.ChildData;
-import org.apache.curator.framework.recipes.cache.PathChildrenCache;
-import org.apache.curator.framework.recipes.cache.PathChildrenCache.StartMode;
 import org.apache.curator.retry.RetryNTimes;
 import org.apache.dubbo.common.utils.CollectionUtils;
 import org.apache.zookeeper.data.Stat;

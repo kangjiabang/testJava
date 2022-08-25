@@ -1,5 +1,6 @@
 package algorithm.list.reverseList;
 
+import algorithm.list.ListNode;
 import org.junit.Test;
 
 /**
