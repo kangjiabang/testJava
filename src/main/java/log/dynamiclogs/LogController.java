@@ -23,6 +23,7 @@ public class LogController {
             ClassLoader cls = getClassLoader();
             URL url = cls.getResource("logback.xml");
             inputStream = url.openStream();
+            //testAi code review
             return IOUtils.toString(inputStream, Charset.defaultCharset());
         } catch (Exception e) {
             e.printStackTrace();
